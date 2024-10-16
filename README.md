@@ -4,6 +4,12 @@ Building RPM in LFS 12.2
 This git is for the scripts needed to build the dependencies for the RPM Package
 Manager (RPM) within a LFS 12.2 system. This is ‘Phase Three’ in `THE-PLAN.md`.
 
+First I am attempting to build RPM 4.18.x as I successfully built that version
+of RPM on LFS 11.3. However that version of RPM is EOL so once I get it building
+I will not install it but instead look to see if I can the modern version of RPM
+to build. I believe they changed the build system to CMake so there will almost
+be some additional dependencies needed.
+
 Dependency One: UnZip
 ---------------------
 
