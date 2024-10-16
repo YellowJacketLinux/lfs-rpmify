@@ -94,4 +94,10 @@ pcre2.
 * Script: [`11-libarchive.sh`](11-libarchive.sh)
 * Status: Script Works
 
+Dependency Twelve: Lua
+----------------------
 
+Justification: Needed to build RPM. No build dependencies outside of LFS.
+
+* Script: [`12-lua.sh`](12-lua.sh)
+* Status: Script Untested
