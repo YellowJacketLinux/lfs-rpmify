@@ -65,12 +65,12 @@ patch -Np1 -i ../${PATCH2}
 
 make -f unix/Makefile generic
 if [ $? -ne 0 ]; then
-  echo "Failed building Unzip60. Sorry."
+  echo "Failed building UnZip-6.0. Sorry."
   exit 1
-else
-  echo "As root user:"
-  echo
-  echo "  cd unzip60"
-  echo "  make prefix=/usr MANDIR=/usr/share/man/man1 -f unix/Makefile install"
-  echo
 fi
+echo "As root user:"
+echo
+echo "  cd unzip60"
+echo "  make prefix=/usr MANDIR=/usr/share/man/man1 -f unix/Makefile install"
+echo
+
