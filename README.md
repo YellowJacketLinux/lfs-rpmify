@@ -125,4 +125,10 @@ Justification: Needed to build GnuPG. Requires libgpg-error.
 * Script: [`14-libksba.sh`](14-libksba.sh)
 * Status: Script Untested
 
+Dependency Fifteen: npth
+------------------------
 
+Justification: Needed to build GnuPG. No dependencies outside of LFS.
+
+* Script: [`15-npth.sh`](15-npth.sh)
+* Status: Script Untested
