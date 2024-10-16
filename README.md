@@ -80,7 +80,7 @@ Justification: Needed to build libxml2. No build dependencies outside of LFS.
 Dependency Seven: libxml2
 -------------------------
 
-Justification: Needed for libarchive. Depends on ICU.
+Justification: Needed for libarchive and CMake. Depends on ICU.
 
 * Script: [`07-libxml2.sh`](07-libxml2.sh)
 * Status: Script Works
@@ -148,4 +148,20 @@ Dependency Fifteen: npth
 Justification: Needed to build GnuPG. No dependencies outside of LFS.
 
 * Script: [`15-npth.sh`](15-npth.sh)
+* Status: Script Untested
+
+Dependency Sixteen: libuv
+-------------------------
+
+Justification: Needed to build CMake. No dependencies outside of LFS.
+
+* Script: [`16-libuv.sh`](16-libuv.sh)
+* Status: Script Untested
+
+Dependency Seventeen: nghttp2
+-----------------------------
+
+Justification: Needed to build CMake. Depends upon libxml2 to build.
+
+* Script: [`17-nghttp2.sh`](17-nghttp2.sh)
 * Status: Script Untested
