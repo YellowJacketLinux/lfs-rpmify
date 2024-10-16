@@ -10,6 +10,23 @@ I will not install it but instead look to see if I can the modern version of RPM
 to build. I believe they changed the build system to CMake so there will almost
 be some additional dependencies needed.
 
+With dependencies through Lua built, RPM 4.18.2 builds in LFS 12.2 but there are
+still three needed components for a complete RPM environment:
+
+1. GnuPG (critical, needed to sign packages, important for package security)
+2. debugedit (critical, needed for debug packages)
+3. fakechroot (needed to run the test suite after building RPM)
+
+GnuPG itself has a lot of dependencies, one of which is OpenLDAP. Hopefully I
+can just build the shared libraries, those should be all that are needed.
+
+While not a *strict* dependency, GnuTLS is a recommended dependency as is
+pinentry but pinentry seems to be runtime so I probably will not build that at
+least not until the RPM bootstrap is complete.
+
+GnuTLS however will be used for *many* other things too, so I will consider it
+and its dependencies as needed in this phase.
+
 Dependency One: UnZip
 ---------------------
 
