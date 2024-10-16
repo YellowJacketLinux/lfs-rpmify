@@ -195,4 +195,12 @@ scripts on a GNU/Linux system. No build dependencies outside of LFS.
 * Script: [`20-which.sh`](20-which.sh)
 * Stutus: Script Untested
 
+Dependency Twenty-One: libseccomp
+---------------------------------
+
+Justification: Needed for GnuTLS. Depends upon which.
+
+* Script: [`21-libseccomp.sh`](21-libseccomp.sh)
+* Status: Script Untested
+
 
