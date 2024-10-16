@@ -29,6 +29,10 @@ fi
 
 tar -jxf ${TARBALL} && cd libgcrypt-1.11.0
 ./configure --prefix=/usr
+if [ $? -ne 0 ]; then
+  echo "Configure script failed for libgcrypt. Sorry."
+  exit 1
+fi
 
 make
 if [ $? -ne 0 ]; then

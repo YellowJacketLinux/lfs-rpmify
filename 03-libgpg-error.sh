@@ -29,6 +29,11 @@ fi
 
 tar -jxf ${TARBALL} && cd libgpg-error-1.50
 ./configure --prefix=/usr
+if [ $? -ne 0 ]; then
+  echo "Configure script failed for libgpg-error. Sorry."
+  exit 1
+fi
+
 
 make
 if [ $? -ne 0 ]; then

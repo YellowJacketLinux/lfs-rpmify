@@ -53,6 +53,10 @@ unzip -q ../${DOCTARBALL}
                       -D SQLITE_ENABLE_UNLOCK_NOTIFY=1   \
                       -D SQLITE_ENABLE_DBSTAT_VTAB=1     \
                       -D SQLITE_SECURE_DELETE=1"
+if [ $? -ne 0 ]; then
+  echo "Configure script failed for SQLite3. Sorry."
+  exit 1
+fi
 
 make
 if [ $? -ne 0 ]; then
