@@ -51,7 +51,7 @@ Dependency Six: ICU
 Justification: Needed to build libxml2. No build dependencies outside of LFS.
 
 * Script: [`06-icu.sh`](06-icu.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Seven: libxml2
 -------------------------
@@ -59,7 +59,7 @@ Dependency Seven: libxml2
 Justification: Needed for libarchive. Depends on ICU.
 
 * Script: [`07-libxml2.sh`](07-libxml2.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Eight: LZO
 ---------------------
@@ -67,7 +67,7 @@ Dependency Eight: LZO
 Justification: Needed for libarchive. No build dependencies outside of LFS.
 
 * Script: [`08-lzo.sh`](08-lzo.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Nine: nettle
 -----------------------
@@ -75,7 +75,7 @@ Dependency Nine: nettle
 Justification: Needed for libarchive. No build dependencies outside of LFS.
 
 * Script: [`09-nettle.sh`](09-nettle.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Ten: pcre2
 ---------------------
@@ -83,7 +83,7 @@ Dependency Ten: pcre2
 Justification: Needed for libarchive. No build dependencies outside of LFS.
 
 * Script: [`10-pcre2.sh`](10-pcre2.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Eleven: libarchive
 -----------------------------
@@ -92,4 +92,6 @@ Justification: Needed to build RPM. Depends upon libxml2, LZO, Nettle, and
 pcre2.
 
 * Script: [`11-libarchive.sh`](11-libarchive.sh)
-* Status: Script Untested
+* Status: Script Works
+
+
