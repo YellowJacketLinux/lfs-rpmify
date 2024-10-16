@@ -85,4 +85,11 @@ Justification: Needed for libarchive. No build dependencies outside of LFS.
 * Script: [`10-pcre2.sh`](10-pcre2.sh)
 * Status: Script Untested
 
+Dependency Eleven: libarchive
+-----------------------------
 
+Justification: Needed to build RPM. Depends upon libxml2, LZO, Nettle, and
+pcre2.
+
+* Script: [`11-libarchive.sh`](11-libarchive.sh)
+* Status: Script Untested
