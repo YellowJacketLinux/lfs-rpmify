@@ -61,4 +61,12 @@ Justification: Needed for libarchive.
 * Script: [`07-libxml2.sh`](07-libxml2.sh)
 * Status: Script Untested
 
+Dependency Eight: LZO
+---------------------
+
+Justification: Needed for libarchive.
+
+* Script: [`08-lzo.sh`](08-lzo.sh)
+* Status: Script Untested
+
 
