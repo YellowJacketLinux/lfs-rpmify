@@ -29,4 +29,12 @@ Justification: Needed to build libgcrypt. No build dependencies outside of LFS.
 * Script: [`03-libgpg-error.sh`](03-libgpg-error.sh)
 * Status: Script Untested
 
+Dependency Four: libgcrypt
+--------------------------
+
+Justification: Needed to build RPM itself. Depends upon libgpg-error.
+
+* Script: [`04-libgcrypt.sh`](04-libgcrypt.sh)
+* Status: Script Untested
+
 
