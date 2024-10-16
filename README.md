@@ -176,4 +176,12 @@ libarchive, libuv, and nghttp2.
 * Status: Script Works
 * Note: Rebuild once GCC Fortran available
 
+Dependency Nineteen: brotli
+---------------------------
 
+Justification: Neded to build GnuTLS and beneficial to future rebuild of cURL.
+Requires CMake to build.
+
+* Script: [`19-brotli.sh`](19-brotli.sh)
+* Status: Script Untested
+* Note: Python bindings NOT built
