@@ -10,5 +10,5 @@ Dependency One: UnZip
 Justification: Needed to build SQLite 3 (to unpack the documentation). No build
 dependencies outside of LFS.
 
-Script: [`01-unzip.sh`](01-unzip.sh)
-Status: Script Untested
+* Script: [`01-unzip.sh`](01-unzip.sh)
+* Status: Script Untested
