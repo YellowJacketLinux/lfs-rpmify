@@ -77,4 +77,12 @@ Justification: Needed for libarchive. No build dependencies outside of LFS.
 * Script: [`09-nettle.sh`](09-nettle.sh)
 * Status: Script Untested
 
+Dependency Ten: pcre2
+---------------------
+
+Justification: Needed for libarchive. No build dependencies outside of LFS.
+
+* Script: [`10-pcre2.sh`](10-pcre2.sh)
+* Status: Script Untested
+
 
