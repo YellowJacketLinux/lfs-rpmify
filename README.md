@@ -37,4 +37,10 @@ Justification: Needed to build RPM itself. Depends upon libgpg-error.
 * Script: [`04-libgcrypt.sh`](04-libgcrypt.sh)
 * Status: Script Works
 
+Dependency Five: popt
+---------------------
 
+Justification: Needed to build RPM itself. No build dependencies outside of LFS.
+
+* Script: [`05-popt.sh`](05-popt.sh)
+* Status: Script Untested
