@@ -112,8 +112,8 @@ Justification: Needed for libarchive. No build dependencies outside of LFS.
 Dependency Eleven: libarchive
 -----------------------------
 
-Justification: Needed to build RPM. Depends upon libxml2, LZO, Nettle, and
-pcre2.
+Justification: Needed to build RPM and CMake. Depends upon libxml2, LZO, Nettle,
+and pcre2.
 
 * Script: [`11-libarchive.sh`](11-libarchive.sh)
 * Status: Script Works
@@ -165,3 +165,13 @@ Justification: Needed to build CMake. Depends upon libxml2 to build.
 
 * Script: [`17-nghttp2.sh`](17-nghttp2.sh)
 * Status: Script Untested
+
+Dependency Eighteen: CMake
+--------------------------
+
+Justification: Needed by brotli and current RPM versions. Depends upon curl,
+libarchive, libuv, and nghttp2.
+
+* Script: [`18-cmake.sh`](18-cmake.sh)
+* Status: Script Untested
+* Note: Rebuild once GCC Fortran available
