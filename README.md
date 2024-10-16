@@ -19,7 +19,7 @@ Dependency Two: SQLite3
 Justification: Needed to build RPM itself. Depends upon UnZip for documentation.
 
 * Script: [`02-sqlite3.sh`](02-sqlite3.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Three: libgpg-error
 ------------------------------
@@ -27,7 +27,7 @@ Dependency Three: libgpg-error
 Justification: Needed to build libgcrypt. No build dependencies outside of LFS.
 
 * Script: [`03-libgpg-error.sh`](03-libgpg-error.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Four: libgcrypt
 --------------------------
@@ -35,6 +35,6 @@ Dependency Four: libgcrypt
 Justification: Needed to build RPM itself. Depends upon libgpg-error.
 
 * Script: [`04-libgcrypt.sh`](04-libgcrypt.sh)
-* Status: Script Untested
+* Status: Script Works
 
 
