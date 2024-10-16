@@ -203,4 +203,16 @@ Justification: Needed for GnuTLS. Depends upon which.
 * Script: [`21-libseccomp.sh`](21-libseccomp.sh)
 * Status: Script Untested
 
+Dependency Twenty-Two: GnuTLS
+-----------------------------
+
+Justification: Needed for GnuPG. Also is the preferred TLS stack for YJL. Build
+requires nettle, libunistring, libtasn1, p11-kit, brotli, libidn2, libseccomp.
+Runtime requires make-ca.
+
+
+* Script: [`22-gnutls.sh`](22-gnutls.sh)
+* Status: Script Untested
+* Note: Note yet built with DANE support, or Trousers support.
+
 
