@@ -11,4 +11,12 @@ Justification: Needed to build SQLite 3 (to unpack the documentation). No build
 dependencies outside of LFS.
 
 * Script: [`01-unzip.sh`](01-unzip.sh)
+* Status: Script Works
+
+Dependency Two: SQLite3
+-----------------------
+
+Justification: Needed to build RPM itself. Depends upon UnZip for documentation.
+
+* Script: [`02-sqlite3.sh`](02-sqlite3.sh)
 * Status: Script Untested
