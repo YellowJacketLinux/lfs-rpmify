@@ -43,7 +43,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "Running check"
+echo "Running make check"
 make check > icu.check.log 2>&1
 
 echo "Inspect icu/source/icu.check.log"
