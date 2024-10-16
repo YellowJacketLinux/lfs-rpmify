@@ -185,3 +185,14 @@ Requires CMake to build.
 * Script: [`19-brotli.sh`](19-brotli.sh)
 * Status: Script Untested
 * Note: Python bindings NOT built
+
+Dependency Twenty: which
+------------------------
+
+Justification: Needed for libseccomp test suite, and by *many* test suites and
+scripts on a GNU/Linux system. No build dependencies outside of LFS.
+
+* Script: [`20-which.sh`](20-which.sh)
+* Stutus: Script Untested
+
+
