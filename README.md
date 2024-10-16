@@ -43,4 +43,12 @@ Dependency Five: popt
 Justification: Needed to build RPM itself. No build dependencies outside of LFS.
 
 * Script: [`05-popt.sh`](05-popt.sh)
+* Status: Script Works
+
+Dependency Five: ICU
+--------------------
+
+Justification: Needed to build libxml2.
+
+* Script: [`06-icu.sh`](06-icu.sh)
 * Status: Script Untested
