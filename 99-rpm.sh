@@ -45,4 +45,4 @@ tar -jxf ${TARBALL} && cd rpm-4.18.2
   --with-cap               \
   --with-acl > ../RPM-CONFIGURE.TXT 2>&1
 
-echo "Inspect RPM-CONFIGURE.TXT" for dependency issues."
+echo "Inspect RPM-CONFIGURE.TXT for dependency issues."
