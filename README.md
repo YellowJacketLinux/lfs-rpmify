@@ -30,8 +30,8 @@ Justification: Needed to build RPM itself. Depends upon UnZip for documentation.
 Dependency Three: libgpg-error
 ------------------------------
 
-Justification: Needed to build libgcrypt and libassuan. No build dependencies
-outside of LFS.
+Justification: Needed to build libgcrypt, libassuan, and libksba. No build
+dependencies outside of LFS.
 
 * Script: [`03-libgpg-error.sh`](03-libgpg-error.sh)
 * Status: Script Works
@@ -112,11 +112,17 @@ Justification: Needed to build RPM. No build dependencies outside of LFS.
 Dependency Thirteen: libassuan
 ------------------------------
 
-Justification: Needed to build GnuPG
+Justification: Needed to build GnuPG. Requires libgpg-error.
 
 * Script: [`13-libassuan.sh`](13-libassuan.sh)
 * Status: Script Untested
 
+Dependency Fourteen: libksba
+----------------------------
 
+Justification: Needed to build GnuPG. Requires libgpg-error.
+
+* Script: [`14-libksba.sh`](14-libksba.sh)
+* Status: Script Untested
 
 
