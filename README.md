@@ -132,7 +132,7 @@ Dependency Thirteen: libassuan
 Justification: Needed to build GnuPG. Requires libgpg-error.
 
 * Script: [`13-libassuan.sh`](13-libassuan.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Fourteen: libksba
 ----------------------------
@@ -140,7 +140,7 @@ Dependency Fourteen: libksba
 Justification: Needed to build GnuPG. Requires libgpg-error.
 
 * Script: [`14-libksba.sh`](14-libksba.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Fifteen: npth
 ------------------------
@@ -148,7 +148,7 @@ Dependency Fifteen: npth
 Justification: Needed to build GnuPG. No dependencies outside of LFS.
 
 * Script: [`15-npth.sh`](15-npth.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Sixteen: libuv
 -------------------------
@@ -156,7 +156,7 @@ Dependency Sixteen: libuv
 Justification: Needed to build CMake. No dependencies outside of LFS.
 
 * Script: [`16-libuv.sh`](16-libuv.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Seventeen: nghttp2
 -----------------------------
@@ -164,7 +164,7 @@ Dependency Seventeen: nghttp2
 Justification: Needed to build CMake. Depends upon libxml2 to build.
 
 * Script: [`17-nghttp2.sh`](17-nghttp2.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Eighteen: CMake
 --------------------------
@@ -173,5 +173,7 @@ Justification: Needed by brotli and current RPM versions. Depends upon curl,
 libarchive, libuv, and nghttp2.
 
 * Script: [`18-cmake.sh`](18-cmake.sh)
-* Status: Script Untested
+* Status: Script Works
 * Note: Rebuild once GCC Fortran available
+
+
