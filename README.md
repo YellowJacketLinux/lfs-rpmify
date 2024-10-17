@@ -39,7 +39,8 @@ dependencies outside of LFS.
 Dependency Two: SQLite3
 -----------------------
 
-Justification: Needed to build RPM itself. Depends upon UnZip for documentation.
+Justification: Needed to build RPM itself and for Cyrus SASL. Depends upon UnZip
+for documentation.
 
 * Script: [`02-sqlite3.sh`](02-sqlite3.sh)
 * Status: Script Works
@@ -222,5 +223,14 @@ Justification: Needed for Cyrus SASL. No build dependencies outside of LFS.
 
 * Script: [`23-lmdb.sh`](23-lmdb.sh)
 * Status: Script Untested
+
+Dependency Twenty-Four: Cyrus SASL
+----------------------------------
+
+Justification: Needed for OpenLDAP. Requires LMDB and SQLite3
+
+* Script: [`24-cyrus-sasl.sh`](24-cyrus-sasl.sh)
+* Status: Script Untested
+* Note: Does not install files needed to start the auth daemon
 
 
