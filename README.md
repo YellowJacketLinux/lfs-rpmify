@@ -298,4 +298,21 @@ libdw from elfutils.
 * Script: [`29-debugedit.sh`](29-debugedit.sh)
 * Status: Script Works
 
+Dependency Thirty: swig
+-----------------------
+
+Justification: Required to build audit. Build requires pcre2.
+
+* Script: [`30-swig.sh`](30-swig.sh)
+* Status: Working
+
+Dependency Thirty-One: audit
+----------------------------
+
+Justification: Required to build RPM 4.20.0 (current)
+
+* Script: [`31-audit.sh`](31-audit.sh)
+* Status: Working
+* Note: Did not try starting the service
+
 
