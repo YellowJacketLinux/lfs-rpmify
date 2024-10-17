@@ -26,7 +26,25 @@ RPM since the 4.18.x series have changed their build system, it is quite
 possible they no longer require fakechroot for their test suite.
 
 The same issue is reported as issue #105 on github with a patch from someone
-other than the author, so I may use it if new RPM still uses fakechroot.
+other than the author, so I may use it if new RPM still uses fakechroot. It does
+not appear to use it.
+
+Newer RPM however does want to use ‘rpm-sequoia’ for digests and OpenPGP
+however ‘rpm-sequoia’ requires Rust and Rust is a can of worms I just do not
+like. Perhaps I am wrong not to like it, but I *really* do not like it. At this
+point in time I have zero plans to ever include it in YJL (add-on repositories
+of course can) as I just see no value in dealing with it.
+
+Newer RPM still supports using libgcrypt for the hashes and there is an
+unsupported way to use their legacy OpenPGP parser for signatures, detailed at
+[RPM PGP Legacy](https://github.com/rpm-software-management/rpmpgp_legacy)
+git repository.
+
+Initially I will just go without signature support on my own system while I
+decide if I want to cave and install a Rust compiler system (I really despise
+the way it works, especially needing to keep multiple versions around because
+of their lack of a stable ABI) and decide what to do later. Signatures are not
+really necessary during the initial bootstrap.
 
 Dependency One: UnZip
 ---------------------
