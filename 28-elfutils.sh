@@ -48,10 +48,18 @@ fi
 echo "running make check"
 make check > elfutils.check.log 2>&1
 
+cat > makeinstall.sh << "EOF"
+#!/bin/bash
+make install
+rm -f /usr/lib/libasm.a
+rm -f /usr/lib/libdw.a
+rm -f /usr/lib/libelf.a
+EOF
+
 echo
 echo "Inspect elfutils-0.191/elfutils.check.log for issues."
 echo "If okay, as root run:"
 echo
 echo "  cd elfutils-0.191"
-echo "  make install"
+echo "  bash makeinstall.sh"
 echo
