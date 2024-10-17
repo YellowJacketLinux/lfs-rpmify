@@ -1,6 +1,8 @@
 Building RPM in LFS 12.2
 ========================
 
+__STATUS__: Mostly complete. Issue still exists with creation of debug packages.
+
 This git is for the scripts needed to build the dependencies for the RPM Package
 Manager (RPM) within a LFS 12.2 system. This is ‘Phase Three’ in `THE-PLAN.md`.
 
@@ -41,7 +43,16 @@ came across the following error:
     RPM build errors:
         Empty %files file /home/rpmbuilder/rpmbuild/BUILD/vim-9.1.0774-build/vim-9.1.0774/debugfiles.list
 
-Something still appears to be missing or incomplete.
+Something still appears to be missing or incomplete. However it does work just
+fine if I disable the creation of the debug packages.
+
+I am continuing with the bootstrapping for the time being.
+
+The file [`yjl-lfs-rpm-macros`](yjl-lfs-rpm-macros) should be installed as
+`/etc/rpm/macros` for LFS/YJL with RPM. The biggest issue is RPM likes to use
+`/lib64` and `/usr/lib64` on `x86_64` systems but LFS (and the YJL I am
+building) does not. The macro file fixes that without needing to alter RPM
+itself.
 
 RPM Test Suite
 --------------
