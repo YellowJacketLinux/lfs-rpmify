@@ -20,6 +20,14 @@ still three needed components for a complete RPM environment:
 Dependencies 13 through 27 build GnuPG.
 Dependencies 28 and 29 build debugedit.
 
+Currently, fakeroot configures without error but the compile fails. The current
+release is from 2019 and the last commit is four years ago. As new versions of
+RPM since the 4.18.x series have changed their build system, it is quite
+possible they no longer require fakechroot for their test suite.
+
+The same issue is reported as issue #105 on github with a patch from someone
+other than the author, so I may use it if new RPM still uses fakechroot.
+
 Dependency One: UnZip
 ---------------------
 
@@ -270,6 +278,6 @@ Justification: Required for RPM debuginfo packages. Build requires libelf and
 libdw from elfutils.
 
 * Script: [`29-debugedit.sh`](29-debugedit.sh)
-* Status: Script Untested
+* Status: Script Works
 
 
