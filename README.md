@@ -251,3 +251,12 @@ libksba, npth, OpenLDAP, GnuTLS, and pinentry.
 
 * Script: [`27-gnupg.sh`](27-gnupg.sh)
 * Status: Script Works
+
+Dependency Twenty-Eight: elfutils
+---------------------------------
+
+Justification: LFS already installs libelf from elfutils, but debugedit needs
+libdw from elfutils as well.
+
+* Script: [`28-elfutils.sh`](28-elfutils.sh)
+* Status: Script Untested
