@@ -48,12 +48,14 @@ cd _build
 #      -DWITH_SELINUX=OFF \
 #      -DWITH_SEQUOIA=OFF \
 #      -DWITH_LEGACY_OPENPGP=ON \
+#      -DRPM_VENDOR=gnu \
 #      -DENABLE_TESTSUITE=OFF -L ..
 #exit
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr \
       -DWITH_SELINUX=OFF \
       -DWITH_SEQUOIA=OFF \
       -DWITH_LEGACY_OPENPGP=ON \
+      -DRPM_VENDOR=gnu \
       -DENABLE_TESTSUITE=OFF ..
 if [ $? -ne 0 ]; then
   echo "CMake configuration failed for RPM. Sorry."
