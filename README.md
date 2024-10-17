@@ -18,6 +18,7 @@ still three needed components for a complete RPM environment:
 3. fakechroot (needed to run the test suite after building RPM)
 
 Dependencies 13 through 27 build GnuPG.
+Dependencies 28 and 29 build debugedit.
 
 Dependency One: UnZip
 ---------------------
@@ -259,4 +260,16 @@ Justification: LFS already installs libelf from elfutils, but debugedit needs
 libdw from elfutils as well.
 
 * Script: [`28-elfutils.sh`](28-elfutils.sh)
+* Status: Script Works
+* Note: Binaries in `/usr/bin` installed with an `eu-` prefix.
+
+Dependency Twenty-Nine: debugedit
+---------------------------------
+
+Justification: Required for RPM debuginfo packages. Build requires libelf and
+libdw from elfutils.
+
+* Script: [`29-debugedit.sh`](29-debugedit.sh)
 * Status: Script Untested
+
+
