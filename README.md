@@ -4,47 +4,48 @@ Building RPM in LFS 12.2
 This git is for the scripts needed to build the dependencies for the RPM Package
 Manager (RPM) within a LFS 12.2 system. This is ‘Phase Three’ in `THE-PLAN.md`.
 
-First I am attempting to build RPM 4.18.x as I successfully built that version
-of RPM on LFS 11.3. However that version of RPM is EOL so once I get it building
-I will not install it but instead look to see if I can the modern version of RPM
-to build. I believe they changed the build system to CMake so there will almost
-be some additional dependencies needed.
+First I resolved the dependencies needed to build RPM 4.18.2 as I successfully
+built and used RPM 4.18.1 on an LFS 11.3 system so I knew it was possible. Once
+I had that building (but not installed) I resolved the dependencies needed to
+build RPM 4.20.0 which is the current series.
 
 With dependencies through Lua built, RPM 4.18.2 builds in LFS 12.2 but there are
-still three needed components for a complete RPM environment:
+still two needed components for a complete RPM environment:
 
 1. GnuPG (critical, needed to sign packages, important for package security)
 2. debugedit (critical, needed for debug packages)
-3. fakechroot (needed to run the test suite after building RPM)
 
 Dependencies 13 through 27 build GnuPG.
 Dependencies 28 and 29 build debugedit.
 
-Currently, fakeroot configures without error but the compile fails. The current
-release is from 2019 and the last commit is four years ago. As new versions of
-RPM since the 4.18.x series have changed their build system, it is quite
-possible they no longer require fakechroot for their test suite.
+Some of the additional needed dependencies for RPM 4.20.0 (such as CMake) were
+built as a result of building GnuPG, there was only one additional dependency
+(audit) which itself had an unmet dependency (swig). Once those were built, I
+was able to successfully build RPM 4.20.0.
 
-The same issue is reported as issue #105 on github with a patch from someone
-other than the author, so I may use it if new RPM still uses fakechroot. It does
-not appear to use it.
-
-Newer RPM however does want to use ‘rpm-sequoia’ for digests and OpenPGP
-however ‘rpm-sequoia’ requires Rust and Rust is a can of worms I just do not
-like. Perhaps I am wrong not to like it, but I *really* do not like it. At this
+RPM 4.20.0 does want to use ‘rpm-sequoia’ for digests and OpenPGP however
+‘rpm-sequoia’ requires Rust and Rust is a can of worms I just do not like.
+Perhaps I am wrong not to like it, but I *really* do not like it. At this
 point in time I have zero plans to ever include it in YJL (add-on repositories
 of course can) as I just see no value in dealing with it.
 
-Newer RPM still supports using libgcrypt for the hashes and there is an
+RPM 4.20.0 still supports using libgcrypt for the hashes and there is an
 unsupported way to use their legacy OpenPGP parser for signatures, detailed at
 [RPM PGP Legacy](https://github.com/rpm-software-management/rpmpgp_legacy)
-git repository.
+git repository. I hope to implement that.
 
-Initially I will just go without signature support on my own system while I
-decide if I want to cave and install a Rust compiler system (I really despise
-the way it works, especially needing to keep multiple versions around because
-of their lack of a stable ABI) and decide what to do later. Signatures are not
-really necessary during the initial bootstrap.
+I have not tried yet, hopefully before this weekend I will, and then I can start
+bootstrapping LFS with RPM.
+
+RPM Test Suite
+--------------
+
+RPM 4.18.2 requires `fakechroot` to run the test suite. That project appears to
+be abandoned with the last release about four years ago, and no recent activity
+in the project git repository.
+
+RPM 4.20.0 requires either `podman` or `docker` to run the test suite. As I do
+not (yet) have either available, I could not run the test suite.
 
 Dependency One: UnZip
 ---------------------
