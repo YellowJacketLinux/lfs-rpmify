@@ -48,8 +48,8 @@ for documentation.
 Dependency Three: libgpg-error
 ------------------------------
 
-Justification: Needed to build libgcrypt, libassuan, and libksba. No build
-dependencies outside of LFS.
+Justification: Needed to build libgcrypt, libassuan, libksba, and pinentry. No
+build dependencies outside of LFS.
 
 * Script: [`03-libgpg-error.sh`](03-libgpg-error.sh)
 * Status: Script Works
@@ -130,7 +130,7 @@ Justification: Needed to build RPM. No build dependencies outside of LFS.
 Dependency Thirteen: libassuan
 ------------------------------
 
-Justification: Needed to build GnuPG. Requires libgpg-error.
+Justification: Needed to build pinentry and GnuPG. Requires libgpg-error.
 
 * Script: [`13-libassuan.sh`](13-libassuan.sh)
 * Status: Script Works
@@ -241,6 +241,15 @@ Justification: Needed for GnuPG. Requires Cyrus SASL to build.
 * Script: [`25-openldap.sh`](25-openldap.sh)
 * Status: Script Untested
 * Note: Only installs client libraries, not the daemon
+
+Dependency Twenty-Six: pinentry
+-------------------------------
+
+Justification: Runtime dependency of GnuPG. Requires libassuan and libgpg-error.
+
+* Script: [`26-pinentry.sh`](26-pinentry.sh)
+* Status: Script Works
+* Note: GUI clients not built yet
 
 Dependency Twenty-Seven: GnuPG
 ------------------------------
