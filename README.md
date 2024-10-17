@@ -233,4 +233,13 @@ Justification: Needed for OpenLDAP. Requires LMDB and SQLite3
 * Status: Script Untested
 * Note: Does not install files needed to start the auth daemon
 
+Dependency Twenty-Five: OpenLDAP
+--------------------------------
+
+Justification: Needed for GnuPG. Requires Cyrus SASL to build.
+
+* Script: [`25-openldap.sh`](25-openldap.sh)
+* Status: Script Untested
+* Note: Only installs client libraries, not the daemon
+
 
