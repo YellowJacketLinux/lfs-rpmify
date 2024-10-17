@@ -17,15 +17,7 @@ still three needed components for a complete RPM environment:
 2. debugedit (critical, needed for debug packages)
 3. fakechroot (needed to run the test suite after building RPM)
 
-GnuPG itself has a lot of dependencies, one of which is OpenLDAP. Hopefully I
-can just build the shared libraries, those should be all that are needed.
-
-While not a *strict* dependency, GnuTLS is a recommended dependency as is
-pinentry but pinentry seems to be runtime so I probably will not build that at
-least not until the RPM bootstrap is complete.
-
-GnuTLS however will be used for *many* other things too, so I will consider it
-and its dependencies as needed in this phase.
+Dependencies 13 through 27 build GnuPG.
 
 Dependency One: UnZip
 ---------------------
@@ -184,7 +176,7 @@ Justification: Neded to build GnuTLS and beneficial to future rebuild of cURL.
 Requires CMake to build.
 
 * Script: [`19-brotli.sh`](19-brotli.sh)
-* Status: Script Untested
+* Status: Script Works
 * Note: Python bindings NOT built
 
 Dependency Twenty: which
@@ -194,7 +186,7 @@ Justification: Needed for libseccomp test suite, and by *many* test suites and
 scripts on a GNU/Linux system. No build dependencies outside of LFS.
 
 * Script: [`20-which.sh`](20-which.sh)
-* Stutus: Script Untested
+* Stutus: Script Works
 
 Dependency Twenty-One: libseccomp
 ---------------------------------
@@ -202,7 +194,7 @@ Dependency Twenty-One: libseccomp
 Justification: Needed for GnuTLS. Depends upon which.
 
 * Script: [`21-libseccomp.sh`](21-libseccomp.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Twenty-Two: GnuTLS
 -----------------------------
@@ -213,7 +205,7 @@ Runtime requires make-ca.
 
 
 * Script: [`22-gnutls.sh`](22-gnutls.sh)
-* Status: Script Untested
+* Status: Script Works
 * Note: Note yet built with DANE support, or Trousers support.
 
 Dependency Twenty-Three: LMDB
@@ -222,7 +214,7 @@ Dependency Twenty-Three: LMDB
 Justification: Needed for Cyrus SASL. No build dependencies outside of LFS.
 
 * Script: [`23-lmdb.sh`](23-lmdb.sh)
-* Status: Script Untested
+* Status: Script Works
 
 Dependency Twenty-Four: Cyrus SASL
 ----------------------------------
@@ -230,7 +222,7 @@ Dependency Twenty-Four: Cyrus SASL
 Justification: Needed for OpenLDAP. Requires LMDB and SQLite3
 
 * Script: [`24-cyrus-sasl.sh`](24-cyrus-sasl.sh)
-* Status: Script Untested
+* Status: Script Works
 * Note: Does not install files needed to start the auth daemon
 
 Dependency Twenty-Five: OpenLDAP
@@ -239,7 +231,7 @@ Dependency Twenty-Five: OpenLDAP
 Justification: Needed for GnuPG. Requires Cyrus SASL to build.
 
 * Script: [`25-openldap.sh`](25-openldap.sh)
-* Status: Script Untested
+* Status: Script Works
 * Note: Only installs client libraries, not the daemon
 
 Dependency Twenty-Six: pinentry
@@ -258,4 +250,4 @@ Justification: Needed for RPM signatures. Requires libassuan, libgcrypt,
 libksba, npth, OpenLDAP, GnuTLS, and pinentry.
 
 * Script: [`27-gnupg.sh`](27-gnupg.sh)
-* Status: Script Untested
+* Status: Script Works
