@@ -32,10 +32,16 @@ of course can) as I just see no value in dealing with it.
 RPM 4.20.0 still supports using libgcrypt for the hashes and there is an
 unsupported way to use their legacy OpenPGP parser for signatures, detailed at
 [RPM PGP Legacy](https://github.com/rpm-software-management/rpmpgp_legacy)
-git repository. I hope to implement that.
+git repository. That is implemented in my build of RPM 4.20.0.
 
-I have not tried yet, hopefully before this weekend I will, and then I can start
-bootstrapping LFS with RPM.
+With RPM built, I successfully built and installed a noarch package (kernel ABI
+headers for GlibC) however when attempting to build a binary package (vim) I
+came across the following error:
+
+    RPM build errors:
+        Empty %files file /home/rpmbuilder/rpmbuild/BUILD/vim-9.1.0774-build/vim-9.1.0774/debugfiles.list
+
+Something still appears to be missing or incomplete.
 
 RPM Test Suite
 --------------
@@ -305,7 +311,7 @@ Dependency Thirty: swig
 Justification: Required to build audit. Build requires pcre2.
 
 * Script: [`30-swig.sh`](30-swig.sh)
-* Status: Working
+* Status: Script Works
 
 Dependency Thirty-One: audit
 ----------------------------
@@ -313,7 +319,14 @@ Dependency Thirty-One: audit
 Justification: Required to build RPM 4.20.0 (current)
 
 * Script: [`31-audit.sh`](31-audit.sh)
-* Status: Working
+* Status: Script Works
 * Note: Did not try starting the service
 
 
+
+Build RPM 4.20.0
+----------------
+
+* Script: [`99-rpm.sh`](99-rpm.sh)
+* Status: Script Works
+* Note: Something is still missing related to debug packages.
