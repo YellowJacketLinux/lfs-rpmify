@@ -215,4 +215,12 @@ Runtime requires make-ca.
 * Status: Script Untested
 * Note: Note yet built with DANE support, or Trousers support.
 
+Dependency Twenty-Three: LMDB
+-----------------------------
+
+Justification: Needed for Cyrus SASL. No build dependencies outside of LFS.
+
+* Script: [`23-lmdb.sh`](23-lmdb.sh)
+* Status: Script Untested
+
 
