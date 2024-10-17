@@ -242,4 +242,11 @@ Justification: Needed for GnuPG. Requires Cyrus SASL to build.
 * Status: Script Untested
 * Note: Only installs client libraries, not the daemon
 
+Dependency Twenty-Seven: GnuPG
+------------------------------
 
+Justification: Needed for RPM signatures. Requires libassuan, libgcrypt,
+libksba, npth, OpenLDAP, GnuTLS, and pinentry.
+
+* Script: [`27-gnupg.sh`](27-gnupg.sh)
+* Status: Script Untested
