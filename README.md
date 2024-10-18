@@ -333,6 +333,14 @@ Justification: Required to build RPM 4.20.0 (current)
 * Status: Script Works
 * Note: Did not try starting the service
 
+Dependency Thirty-Two: cpio
+---------------------------
+
+Justification: RPM run-time dependency.
+
+* Script: [`32-cpio.sh`](32-cpio.sh)
+* Status: Script Works
+
 
 
 Build RPM 4.20.0
