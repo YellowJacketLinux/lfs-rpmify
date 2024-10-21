@@ -16,4 +16,8 @@
 # Most distros use OpenSSL for the OpenSSL API
 %libresslAPI true
 
+# Do not require systemd-sysusers management of users/groups
+# #   when building packages
+%_use_weak_usergroup_deps 1
+
 ####### End Yellow Jacket GNU/Linux RPM Macros
