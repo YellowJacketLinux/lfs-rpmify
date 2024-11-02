@@ -1,7 +1,7 @@
 Building RPM in LFS 12.2
 ========================
 
-__STATUS__: Mostly complete. Issue still exists with creation of debug packages.
+__STATUS__: Complee
 
 This git is for the scripts needed to build the dependencies for the RPM Package
 Manager (RPM) within a LFS 12.2 system. This is ‘Phase Three’ in `THE-PLAN.md`.
@@ -35,18 +35,6 @@ RPM 4.20.0 still supports using libgcrypt for the hashes and there is an
 unsupported way to use their legacy OpenPGP parser for signatures, detailed at
 [RPM PGP Legacy](https://github.com/rpm-software-management/rpmpgp_legacy)
 git repository. That is implemented in my build of RPM 4.20.0.
-
-With RPM built, I successfully built and installed a noarch package (kernel ABI
-headers for GlibC) however when attempting to build a binary package (vim) I
-came across the following error:
-
-    RPM build errors:
-        Empty %files file /home/rpmbuilder/rpmbuild/BUILD/vim-9.1.0774-build/vim-9.1.0774/debugfiles.list
-
-Something still appears to be missing or incomplete. However it does work just
-fine if I disable the creation of the debug packages.
-
-I am continuing with the bootstrapping for the time being.
 
 The file [`yjl-lfs-rpm-macros`](yjl-lfs-rpm-macros) should be installed as
 `/etc/rpm/macros` for LFS/YJL with RPM. The biggest issue is RPM likes to use
@@ -331,7 +319,9 @@ Justification: Required to build RPM 4.20.0 (current)
 
 * Script: [`31-audit.sh`](31-audit.sh)
 * Status: Script Works
-* Note: Did not try starting the service
+* Note: \texttt{/var/log/auditd} needs to be manually created and the configure
+        switch in script needs to be updated for correct PID location, but it
+        works.
 
 Dependency Thirty-Two: cpio
 ---------------------------
@@ -348,4 +338,3 @@ Build RPM 4.20.0
 
 * Script: [`99-rpm.sh`](99-rpm.sh)
 * Status: Script Works
-* Note: Something is still missing related to debug packages.
